@@ -1,0 +1,132 @@
+.game-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+
+.game-canvas {
+  border: 4px solid #333;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Minesweeper Styles */
+.minesweeper-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background: #c0c0c0;
+  height: 100%;
+}
+
+.minesweeper-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 8px 12px;
+  background: #bdbdbd;
+  border: 3px solid;
+  border-color: #808080 #fff #fff #808080;
+  margin-bottom: 12px;
+}
+
+.mine-counter {
+  font-family: 'Courier New', monospace;
+  font-size: 20px;
+  font-weight: bold;
+  background: #000;
+  color: #ff0000;
+  padding: 4px 8px;
+  min-width: 60px;
+  text-align: center;
+}
+
+.reset-button {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border: 3px solid;
+  border-color: #fff #808080 #808080 #fff;
+  background: #c0c0c0;
+}
+
+.reset-button:active {
+  border-color: #808080 #fff #fff #808080;
+}
+
+.minesweeper-grid {
+  border: 3px solid;
+  border-color: #808080 #fff #fff #808080;
+  background: #c0c0c0;
+}
+
+.minesweeper-row {
+  display: flex;
+}
+
+.minesweeper-cell {
+  width: 30px;
+  height: 30px;
+  border: 3px solid;
+  border-color: #fff #808080 #808080 #fff;
+  background: #c0c0c0;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.minesweeper-cell:active:not(.revealed) {
+  border-color: #808080;
+  border-width: 1px;
+}
+
+.minesweeper-cell.revealed {
+  border: 1px solid #808080;
+  background: #bdbdbd;
+}
+
+.minesweeper-cell.mine {
+  background: #ff0000;
+}
+
+.game-over-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-over-message {
+  background: #c0c0c0;
+  padding: 24px 40px;
+  border: 3px solid;
+  border-color: #fff #808080 #808080 #fff;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.game-over-message button {
+  display: block;
+  margin: 16px auto 0;
+  padding: 8px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 3px solid;
+  border-color: #fff #808080 #808080 #fff;
+  background: #c0c0c0;
+}

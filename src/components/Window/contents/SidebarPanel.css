@@ -1,0 +1,113 @@
+.sidebar-panel {
+  background: linear-gradient(180deg, #6b92c7 0%, #5a82b8 100%);
+  border-radius: 4px;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+
+.sidebar-panel.collapsed {
+  background: linear-gradient(180deg, #4a6ea5 0%, #3d5d8a 100%);
+}
+
+.sidebar-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 8px 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-system);
+}
+
+.sidebar-panel-title {
+  font-size: 11px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar-panel-toggle {
+  font-size: 8px;
+  color: #fff;
+  opacity: 0.8;
+}
+
+.sidebar-panel-content {
+  padding: 8px 12px 12px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Sidebar Links */
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 4px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: var(--font-system);
+  color: #fff;
+  font-size: 11px;
+  text-align: left;
+}
+
+.sidebar-link:hover {
+  text-decoration: underline;
+}
+
+.sidebar-link-icon {
+  font-size: 14px;
+  width: 18px;
+  text-align: center;
+}
+
+.sidebar-link-text {
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Sidebar Info */
+.sidebar-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 4px 0;
+}
+
+.sidebar-info-icon {
+  font-size: 12px;
+  width: 18px;
+  text-align: center;
+  color: #fff;
+}
+
+.sidebar-info-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.sidebar-info-label {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.sidebar-info-value {
+  font-size: 11px;
+  color: #fff;
+  font-weight: 500;
+}
+
+/* White variant for right-side panels */
+.sidebar-panel.white {
+  background: linear-gradient(180deg, #7aa3d4 0%, #6993c4 100%);
+}
+
+.sidebar-panel.white .sidebar-panel-content {
+  background: rgba(255, 255, 255, 0.15);
+}

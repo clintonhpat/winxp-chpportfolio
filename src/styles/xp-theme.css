@@ -1,0 +1,253 @@
+/* Windows XP Theme Variables */
+:root {
+  /* XP Blue Color Scheme */
+  --xp-blue-dark: #0a246a;
+  --xp-blue-medium: #245edb;
+  --xp-blue-light: #3a6ea5;
+  --xp-blue-gradient-start: #235cda;
+  --xp-blue-gradient-end: #1941a3;
+  
+  /* Taskbar Colors */
+  --taskbar-gradient-start: #1f5bce;
+  --taskbar-gradient-middle: #3c8cf4;
+  --taskbar-gradient-end: #245edb;
+  --taskbar-height: 36px;
+  
+  /* Start Button */
+  --start-gradient-start: #3c943c;
+  --start-gradient-end: #2d7b2d;
+  
+  /* Window Colors */
+  --window-title-active-start: #0a246a;
+  --window-title-active-end: #a6d1f5;
+  --window-title-inactive-start: #7a96df;
+  --window-title-inactive-end: #c4d7f5;
+  --window-border: #0054e3;
+  --window-background: #ece9d8;
+  --window-inner-border: #fff;
+  
+  /* Button Colors */
+  --button-face: #ece9d8;
+  --button-highlight: #fff;
+  --button-shadow: #aca899;
+  --button-dark-shadow: #716f64;
+  
+  /* Text Colors */
+  --text-primary: #000;
+  --text-secondary: #555;
+  --text-light: #fff;
+  --text-link: #0066cc;
+  
+  /* Selection */
+  --selection-bg: #316ac5;
+  --selection-text: #fff;
+  
+  /* Desktop */
+  --desktop-icon-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+  
+  /* Shadows */
+  --window-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  
+  /* Fonts */
+  --font-system: 'Tahoma', 'Segoe UI', sans-serif;
+  --font-mono: 'Consolas', 'Courier New', monospace;
+  
+  /* Z-index layers */
+  --z-desktop: 1;
+  --z-window-base: 100;
+  --z-taskbar: 9999;
+  --z-start-menu: 10000;
+  --z-context-menu: 10001;
+}
+
+/* Reset and Base Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: var(--font-system);
+  font-size: 11px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  user-select: none;
+}
+
+/* Scrollbar Styling - XP Style */
+::-webkit-scrollbar {
+  width: 17px;
+  height: 17px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1efe2;
+  border: 1px solid #aca899;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right, #ece9d8, #d4d0c8);
+  border: 1px solid;
+  border-color: #fff #716f64 #716f64 #fff;
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to right, #e4e0d8, #ccc8c0);
+}
+
+::-webkit-scrollbar-button {
+  background: #ece9d8;
+  border: 1px solid;
+  border-color: #fff #716f64 #716f64 #fff;
+  width: 17px;
+  height: 17px;
+}
+
+::-webkit-scrollbar-corner {
+  background: #ece9d8;
+}
+
+/* Selection */
+::selection {
+  background: var(--selection-bg);
+  color: var(--selection-text);
+}
+
+/* XP Button Base Style */
+.xp-button {
+  font-family: var(--font-system);
+  font-size: 11px;
+  padding: 2px 12px;
+  min-width: 75px;
+  background: linear-gradient(to bottom, #fff 0%, #ece9d8 89%, #d4d0c8 100%);
+  border: 1px solid;
+  border-color: #003c74 #003c74 #003c74 #003c74;
+  border-radius: 3px;
+  box-shadow: 
+    inset 0 0 0 1px #fff,
+    inset 0 0 0 2px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  outline: none;
+}
+
+.xp-button:hover {
+  background: linear-gradient(to bottom, #fff 0%, #f5f3ea 89%, #dedad2 100%);
+}
+
+.xp-button:active {
+  background: linear-gradient(to bottom, #d4d0c8 0%, #ece9d8 100%);
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.xp-button:focus {
+  border-color: #003c74;
+  box-shadow: 
+    inset 0 0 0 1px #fff,
+    0 0 0 1px #003c74;
+}
+
+/* XP Input Style */
+.xp-input {
+  font-family: var(--font-system);
+  font-size: 11px;
+  padding: 3px 4px;
+  background: #fff;
+  border: 1px solid;
+  border-color: #7f9db9 #f0f0f0 #f0f0f0 #7f9db9;
+  box-shadow: inset 1px 1px 0 #aca899;
+  outline: none;
+}
+
+.xp-input:focus {
+  border-color: #316ac5;
+}
+
+/* XP Panel Style */
+.xp-panel {
+  background: var(--window-background);
+  border: 1px solid;
+  border-color: #fff #aca899 #aca899 #fff;
+}
+
+.xp-panel-inset {
+  background: #fff;
+  border: 1px solid;
+  border-color: #aca899 #fff #fff #aca899;
+  box-shadow: inset 1px 1px 0 #706f64;
+}
+
+/* Animation keyframes */
+@keyframes windowOpen {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes windowClose {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+
+@keyframes startMenuSlide {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes iconBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+/* Utility Classes */
+.no-select {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Mobile Responsive Base */
+@media (max-width: 768px) {
+  :root {
+    --taskbar-height: 48px;
+  }
+  
+  body {
+    font-size: 14px;
+  }
+  
+  .xp-button {
+    font-size: 14px;
+    padding: 6px 16px;
+    min-width: 90px;
+  }
+}

@@ -1,0 +1,146 @@
+.window-content {
+  height: 100%;
+  overflow: auto;
+  background: #fff;
+}
+
+.window-content-fallback {
+  padding: 20px;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+/* Common content styles */
+.content-container {
+  padding: 16px;
+  min-height: 100%;
+}
+
+.content-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #d4d0c8;
+}
+
+.content-header h1 {
+  font-size: 18px;
+  font-weight: normal;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.content-section {
+  margin-bottom: 20px;
+}
+
+.content-section h2 {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--xp-blue-dark);
+  margin-bottom: 8px;
+}
+
+.content-section p {
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--text-primary);
+}
+
+/* XP Explorer Style Sidebar */
+.explorer-layout {
+  display: flex;
+  height: 100%;
+  gap: 0;
+}
+
+.explorer-sidebar {
+  width: 200px;
+  background: linear-gradient(
+    180deg,
+    #7ba2e7 0%,
+    #6591d9 10%,
+    #4f7bcf 100%
+  );
+  padding: 8px;
+  flex-shrink: 0;
+  overflow-y: auto;
+}
+
+.explorer-sidebar-section {
+  background: linear-gradient(
+    180deg,
+    #fff 0%,
+    #d6dff7 100%
+  );
+  border-radius: 5px;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+
+.explorer-sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 10px;
+  background: linear-gradient(
+    90deg,
+    #fff 0%,
+    #c6d3f7 100%
+  );
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 11px;
+  color: #215dc6;
+}
+
+.explorer-sidebar-content {
+  padding: 8px 10px;
+}
+
+.explorer-sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 0;
+  font-size: 11px;
+  color: #215dc6;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.explorer-sidebar-item:hover {
+  text-decoration: underline;
+}
+
+.explorer-main {
+  flex: 1;
+  overflow: auto;
+  background: #fff;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .explorer-layout {
+    flex-direction: column;
+  }
+  
+  .explorer-sidebar {
+    width: 100%;
+    max-height: 150px;
+  }
+  
+  .content-container {
+    padding: 12px;
+  }
+  
+  .content-header h1 {
+    font-size: 16px;
+  }
+  
+  .content-section p {
+    font-size: 13px;
+  }
+}

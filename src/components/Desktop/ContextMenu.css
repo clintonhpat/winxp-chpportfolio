@@ -1,0 +1,86 @@
+.context-menu {
+  position: fixed;
+  background: #fff;
+  border: 1px solid #808080;
+  box-shadow: 
+    2px 2px 5px rgba(0, 0, 0, 0.3),
+    inset 1px 1px 0 #fff,
+    inset -1px -1px 0 #dfdfdf;
+  min-width: 200px;
+  padding: 2px;
+  z-index: 10001;
+  font-family: var(--font-system);
+  font-size: 11px;
+}
+
+.context-menu-section {
+  padding: 2px 0;
+}
+
+.context-menu-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 4px 24px 4px 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-system);
+  font-size: 11px;
+  text-align: left;
+  color: #000;
+  position: relative;
+}
+
+.context-menu-item:hover {
+  background: #316ac5;
+  color: #fff;
+}
+
+.context-menu-item:hover .menu-icon {
+  filter: brightness(2);
+}
+
+.menu-icon {
+  width: 20px;
+  margin-right: 8px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.menu-label {
+  flex: 1;
+}
+
+.menu-arrow {
+  font-size: 8px;
+  margin-left: 16px;
+  opacity: 0.7;
+}
+
+.menu-shortcut {
+  color: #808080;
+  margin-left: 24px;
+  font-size: 10px;
+}
+
+.context-menu-item:hover .menu-shortcut {
+  color: #ccc;
+}
+
+.context-menu-divider {
+  height: 1px;
+  background: #808080;
+  margin: 2px 2px;
+  box-shadow: 0 1px 0 #fff;
+}
+
+.context-menu-item:disabled {
+  color: #808080;
+  cursor: default;
+}
+
+.context-menu-item:disabled:hover {
+  background: none;
+  color: #808080;
+}

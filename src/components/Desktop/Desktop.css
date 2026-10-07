@@ -1,0 +1,61 @@
+.desktop-icons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 85px);
+  grid-template-rows: repeat(auto-fill, 85px);
+  grid-auto-flow: column;
+  gap: 4px;
+  padding: 10px;
+  height: 100%;
+  align-content: start;
+}
+
+/* Mobile responsive grid */
+@media (max-width: 768px) {
+  .desktop-icons-grid {
+    grid-template-columns: repeat(auto-fill, 95px);
+    grid-template-rows: repeat(auto-fill, 100px);
+    gap: 8px;
+    padding: 15px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .desktop-icons-grid {
+    grid-template-columns: repeat(auto-fill, 80px);
+    grid-template-rows: repeat(auto-fill, 95px);
+    gap: 6px;
+    padding: 10px;
+  }
+}
+
+/* Landscape mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .desktop-icons-grid {
+    grid-template-columns: repeat(auto-fill, 75px);
+    grid-template-rows: repeat(auto-fill, 80px);
+    gap: 4px;
+  }
+}
+
+/* Ensure desktop captures mouse events */
+.desktop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: var(--taskbar-height);
+  
+  /* Classic Windows XP "Bliss" wallpaper */
+  background-image: var(--desktop-wallpaper, url('../../assets/wallpaper.png'));
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #3a6ea5;
+  
+  overflow: hidden;
+  z-index: var(--z-desktop);
+  
+  /* Make sure we can receive mouse events */
+  user-select: none;
+}

@@ -1,0 +1,59 @@
+.windows-xp-environment {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: var(--font-system);
+}
+
+/* Boot animation (optional) */
+@keyframes bootUp {
+  0% {
+    opacity: 0;
+    background: #000;
+  }
+  50% {
+    opacity: 1;
+    background: #000;
+  }
+  100% {
+    opacity: 1;
+    background: transparent;
+  }
+}
+
+/* Print styles for resume */
+@media print {
+  .taskbar,
+  .desktop,
+  .window-title-bar,
+  .window-resize-handle {
+    display: none !important;
+  }
+  
+  .window {
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+  
+  .window-body {
+    border: none !important;
+  }
+  
+  .resume-toolbar {
+    display: none !important;
+  }
+  
+  .resume-viewer {
+    padding: 0 !important;
+    background: #fff !important;
+  }
+  
+  .resume-paper {
+    box-shadow: none !important;
+    max-width: none !important;
+  }
+}
